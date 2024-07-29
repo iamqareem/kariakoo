@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cart</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Your Cart</h1>
-  <ul id="cartItems"></ul>
-  <h2>Total: $<span id="totalPrice"></span></h2>
-  <p>Select Payment Method:</p>
-  <button onclick="checkout('Mobile Money')">Mobile Money</button>
-  <button onclick="checkout('Visa/MasterCard')">Visa/MasterCard</button>
-  <button onclick="checkout('PayPal')">PayPal</button>
-
-  <script src="js/script.js"></script>
+    <div class="container">
+        <h1>Your Cart</h1>
+        <ul id="cartItems"></ul>
+        <h2>Total: $<span id="totalPrice"></span></h2>
+        <p>Select Payment Method:</p>
+        <button onclick="checkout('Mobile Money')">Mobile Money</button>
+        <button onclick="checkout('Visa/MasterCard')">Visa/MasterCard</button>
+        <button onclick="checkout('PayPal')">PayPal</button>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
