@@ -2,17 +2,24 @@
 <html>
 <head>
     <title>Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Your Cart</h1>
-        <ul id="cartItems"></ul>
-        <h2>Total: $<span id="totalPrice"></span></h2>
-        <p>Select Payment Method:</p>
-        <button onclick="checkout('Mobile Money')">Mobile Money</button>
-        <button onclick="checkout('Visa/MasterCard')">Visa/MasterCard</button>
-        <button onclick="checkout('PayPal')">PayPal</button>
+        <h1 class="text-center my-4">Your Cart</h1>
+        <ul id="cartItems" class="list-group"></ul>
+        <h2 class="text-center my-4">Total: $<span id="totalPrice"></span></h2>
+        <p class="text-center">Select Payment Method:</p>
+        <div class="text-center">
+            <button class="btn btn-primary" onclick="checkout('Mobile Money')">Mobile Money</button>
+            <button class="btn btn-primary" onclick="checkout('Visa/MasterCard')">Visa/MasterCard</button>
+            <button class="btn btn-primary" onclick="checkout('PayPal')">PayPal</button>
+            <button class="btn btn-secondary" onclick="redirectToMerch()">Merch</button>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

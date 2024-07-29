@@ -2,13 +2,20 @@
 <html>
 <head>
     <title>Products</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Products</h1>
-        <ul id="productList"></ul>
-        <a href="cart.html">View Cart</a>
+        <h1 class="text-center my-4">Products</h1>
+        <ul id="productList" class="list-group"></ul>
+        <div class="text-center mt-4">
+            <a href="cart.html" class="btn btn-primary">View Cart</a>
+            <button class="btn btn-secondary" onclick="redirectToMerch()">Merch</button>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

@@ -1,18 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html class="text-center" data-bs-theme="light" lang="en">
 <head>
-    <title>Category Selection</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Kariakoo - Category Selection</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 15, 250);
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 0; /* Sharp corners */
+        }
+
+        .navbar-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 36px;
+            color: rgb(0, 15, 250);
+        }
+
+        .category-icons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .category-icons .icon {
+            font-size: 60px;
+            margin: 0 20px; /* Adjusted margin for proportionality */
+            color: rgb(0, 15, 250);
+            transition: transform 0.2s;
+        }
+
+        .category-icons .icon:hover,
+        .category-icons .icon:focus {
+            transform: scale(1.1);
+            animation: pulse 0.5s infinite;
+        }
+
+        .category-icons .icon-label {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: rgb(0, 15, 250);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .info-card {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card .info-text {
+            flex: 1;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+        }
+
+        .info-card .info-icon {
+            font-size: 48px;
+            margin-left: 20px;
+            color: rgb(0, 15, 250);
+        }
+
+        .bold-text {
+            font-family: monospace;
+            font-weight: 600;
+        }
+
+        .quote-heading {
+            font-family: monospace;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-title">Kariakoo</div>
+    </nav>
     <div class="container">
-        <h1>Select a Product Category</h1>
-        <ul>
-            <li><a href="products.html?category=raw">Raw</a></li>
-            <li><a href="products.html?category=blend">Blend</a></li>
-            <li><a href="products.html?category=hybrid">Hybrid</a></li>
-            <li><a href="products.html?category=spicy">Spicy</a></li>
-        </ul>
+        <div class="card">
+            <h2 class="card-title">Choose your category please.</h2>
+            <div class="category-icons">
+                <a href="products.html">
+                    <div>
+                        <i class="fas fa-box-open icon"></i>
+                        <span class="icon-label">Merch</span>
+                    </div>
+                </a>
+                <a href="services.html">
+                    <div>
+                        <i class="fas fa-briefcase icon"></i>
+                        <span class="icon-label">Services</span>
+                    </div>
+                </a>
+            </div>
+            <p class="bold-text">You can give the budtender a coffee <i class="fas fa-coffee"></i></p>
+            <h3 class="quote-heading">"Every Stoner has a Skipper"</h3>
+            <div class="info-card">
+                <p class="info-text">Your deluxe suite for delightful vibing, meditation and orchestration, delivering the party to your doorstep and private inhouse hotbox hangouts.</p>
+                <i class="fas fa-truck info-icon"></i>
+            </div>
+            <p>Check <a href="https://github.com/iamqareem/kariakoo">documentation</a> for more information about this project.</p>
+        </div>
+        <p>&copy; Nilecart LLC 2024</p>
     </div>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

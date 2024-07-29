@@ -1,17 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html class="text-center" data-bs-theme="light" lang="en">
 <head>
-    <title>Kariakoo E-Shop</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Kariakoo</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container-fluid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: white;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #004085;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 48px;
+            color: rgb(0, 15, 250);
+        }
+
+        .card-subtitle {
+            font-family: monospace;
+            color: #6c757d;
+        }
+
+        .card-text {
+            font-family: monospace;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .btn-enter, .btn-back {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .btn-enter {
+            background-color: rgb(0, 15, 250);
+            color: white;
+            border: none;
+        }
+
+        .btn-enter:hover {
+            background-color: rgba(0, 15, 250, 0.8);
+            transform: scale(1.05);
+        }
+
+        .btn-back {
+            background-color: white;
+            color: rgb(0, 15, 250);
+            border: 2px solid rgb(0, 15, 250);
+        }
+
+        .btn-back:hover {
+            background-color: rgba(0, 15, 250, 0.1);
+            transform: scale(1.05);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            color: #004085;
+            font-size: 30px;
+            margin: 0 10px;
+        }
+
+        .social-icons a:hover {
+            color: #002752;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Welcome to Kariakoo E-Shop</h1>
-        <p>Please verify your age to continue.</p>
-        <label for="age">Enter your age:</label>
-        <input type="number" id="age" name="age" min="1">
-        <button onclick="verifyAge()">Submit</button>
-        <script src="js/script.js"></script>
+<body class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container-fluid">
+        <div class="card">
+            <h1 class="fs-1 fw-bold card-title">Kariakoo</h1>
+            <h5 class="font-monospace text-center text-muted card-subtitle mb-2">Powered by Nilecart</h5>
+            <p class="font-monospace fw-semibold text-center card-text"style="font-size: 15px;">Our store is tailored for adults. Tap ENTER if your age checks and BACK if negative</p>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <button class="btn btn-enter" onclick="verifyAge(true)">ENTER</button>
+                <button class="btn btn-back" onclick="verifyAge(false)">BACK</button>
+            </div>
+            <div class="social-icons">
+                <a href="mailto:m.abduhlqareem@yandex.com" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function verifyAge(isAdult) {
+            if (isAdult) {
+                window.location.href = "age-verification.html";
+            } else {
+                window.location.href = "https://t.me/+Jv_lSQlaaagwYjFk";
+            }
+        }
+    </script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

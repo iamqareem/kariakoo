@@ -2,14 +2,20 @@
 <html>
 <head>
     <title>Select Location</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </head>
 <body>
     <div class="container">
-        <h1>Select Your Location</h1>
-        <div id="map" style="height: 400px; width: 100%;"></div>
-        <button onclick="confirmLocation()">Confirm Location</button>
+        <h1 class="text-center my-4">Select Your Location</h1>
+        <div id="map" class="mb-4" style="height: 400px; width: 100%;"></div>
+        <div class="text-center">
+            <button class="btn btn-primary" onclick="confirmLocation()">Confirm Location</button>
+        </div>
     </div>
 
     <script>
@@ -24,29 +30,4 @@
 
             map.addListener('click', function(event) {
                 placeMarker(event.latLng);
-            });
-        }
-
-        function placeMarker(location) {
-            if (marker) {
-                marker.setPosition(location);
-            } else {
-                marker = new google.maps.Marker({
-                    position: location,
-                    map: map
-                });
-            }
-        }
-
-        function confirmLocation() {
-            if (marker) {
-                const location = marker.getPosition();
-                alert(`Location confirmed: ${location.lat()}, ${location.lng()}`);
-                // Save location or do something with it
-            } else {
-                alert('Please select a location.');
-            }
-        }
-    </script>
-</body>
-</html>
+           
