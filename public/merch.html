@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merchandise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Branded Merchandise</h1>
+        <ul id="merchList" class="list-group">
+            <!-- List of merch items -->
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const merchItems = [
+                { name: 'T-Shirt', price: 20 },
+                { name: 'Mug', price: 10 },
+                { name: 'Hat', price: 15 },
+            ];
+            const merchList = document.getElementById('merchList');
+            merchItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'list-group-item';
+                li.innerHTML = `${item.name} - $${item.price} <button class="btn btn-sm btn-primary float-right" onclick="addToCart('${item.name}', ${item.price})">Add to Cart</button>`;
+                merchList.appendChild(li);
+            });
+        });
+
+        function addToCart(name, price) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} added to cart!`);
+        }
+    </script>
+</body>
+</html>
